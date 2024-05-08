@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { clear } from "console";
 
 export default function Home() {
   return (
