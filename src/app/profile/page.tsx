@@ -5,6 +5,7 @@ import styled from "styled-components";
 //importing components
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 import ProfileHeader from "../components/ProfileHeader/ProfileHeader";
+import ProfilePhotosGrid from "../components/PhotoGrid/ProfilePhotosGrid";
 //import icons
 import CompassIcon from "../../../public/icons/compass.svg"
 import FilmIcon from "../../../public/icons/film.svg"
@@ -18,6 +19,11 @@ const ProfileContainer = styled.div`
 padding-left: 73px;
 max-width: 935px;
 margin: 30px auto;
+
+@media (max-width: 480px) {
+    padding: 0 0;
+    margin: auto auto;
+}
 `;
 
 //create array of icons to pass to navbar 
@@ -50,6 +56,7 @@ export default function Profile() {
             {/* Header */}
             <ProfileHeader/>
         {/* photogrid */}
+        <ProfilePhotosGrid />
         {/* stories */}
         </ProfileContainer>
         

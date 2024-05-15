@@ -9,18 +9,18 @@ const ProfileHeaderContainer = styled.div`
     grid-template-columns: 1fr 2fr;
 
     @media (max-width: 480px) {
+        /* background-color: red; */
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-gap: 5px;
-        padding-left: 0;
-        justify-self: start;
+        margin-bottom: 44px;
+        padding: 0px 0px;
     }
 `;
 
 const ProfileImage = styled(Image)`
     border-radius: 50%;
     margin: auto auto;
-
+    object-position: center 7%;
     @media (max-width: 480px) {
         height: 100px;
         width: 100px;
@@ -42,9 +42,28 @@ const BioText = styled.div`
         display: grid;
         grid-template-columns: 0.7fr 1fr 1fr;
         max-width: 400px;
-
+        text-align: left;
         span {
             font-weight: bold;
+        }
+    }
+
+    ol, ul {
+    list-style: none;
+}
+
+    @media (max-width: 480px) {
+        margin-left: 15px;
+        font-size: 12px;
+        gap: 10px;
+
+        ul {
+            text-align: center;
+            position: relative;
+            left: -8px;
+        }
+        span {
+            display: block;
         }
     }
 
