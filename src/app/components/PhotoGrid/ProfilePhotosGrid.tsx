@@ -8,10 +8,13 @@ import Image from "next/image";
 
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(3);
-    
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 5px ;
+    grid-column-gap: 5px;
 `;
 const PhotoItem=styled.div`
+    position: relative;
+    padding-bottom: 100%;
 
 `;
 
@@ -48,7 +51,7 @@ export default function ProfilePhotosGrid() {
             {/* {photo item div} */}
             {posts?.map((postObject: PostObject) => (
                 <PhotoItem key={postObject.post_id} >
-                    {/* <Image src={postObject.media_url} alt="Post Photo" fill /> */}
+                    <Image src={postObject.media_url} alt="Post Photo" fill objectFit="cover" />
                 </PhotoItem>
             ))}
             {/* image */}

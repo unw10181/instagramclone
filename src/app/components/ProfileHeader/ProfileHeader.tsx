@@ -7,7 +7,8 @@ const ProfileHeaderContainer = styled.div`
     /* background-color: red; */
     display: grid;
     grid-template-columns: 1fr 2fr;
-
+    margin-bottom: 44px;
+    
     @media (max-width: 480px) {
         /* background-color: red; */
         display: grid;
