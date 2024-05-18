@@ -1,6 +1,6 @@
 "use client"
 //importing libraries 
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 //importing components
 import NavigationBar from "../components/NavigationBar/NavigationBar";
@@ -14,6 +14,12 @@ import HouseIcon from "../../../public/icons/house.svg"
 import MagnifyingGlassIcon from "../../../public/icons/magnifyingglass.svg"
 import MessageIcon from "../../../public/icons/message.svg"
 
+const GlobalStyles = createGlobalStyle`
+  ::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+`;
+
 const ProfileContainer = styled.div`
 /* background-color: red; */
 padding-left: 73px;
@@ -24,6 +30,9 @@ margin: 30px auto;
     padding: 0 0;
     margin: auto auto;
 }
+::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
 `;
 
 //create array of icons to pass to navbar 
@@ -49,6 +58,7 @@ const navbarConfigItems: Icon[] = [
 export default function Profile() {
     return (
         <>
+        <GlobalStyles />
         {/* Nav bar*/}
         <NavigationBar items={navbarConfigItems}/>
         {/* profile container */}
@@ -59,7 +69,6 @@ export default function Profile() {
         <ProfilePhotosGrid />
         {/* stories */}
         </ProfileContainer>
-        
         </>
     );
 }

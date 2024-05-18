@@ -15,6 +15,7 @@ const Navigation = styled.aside`
         grid-gap: 10px;
         border-right: 1px solid rgba(255, 255, 255, 0.1);
         padding: 0px 10px;
+        background-color: black;
 
         button {
             background-color: transparent;
