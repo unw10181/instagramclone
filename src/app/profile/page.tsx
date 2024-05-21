@@ -6,6 +6,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 import ProfileHeader from "../components/ProfileHeader/ProfileHeader";
 import ProfilePhotosGrid from "../components/PhotoGrid/ProfilePhotosGrid";
+import ProfileStoriesGrid from "../components/ProfileStories/ProfileStoriesGrid";
 //import icons
 import CompassIcon from "../../../public/icons/compass.svg"
 import FilmIcon from "../../../public/icons/film.svg"
@@ -63,11 +64,12 @@ export default function Profile() {
         <NavigationBar items={navbarConfigItems}/>
         {/* profile container */}
         <ProfileContainer>
-            {/* Header */}
+        {/* Header */}
             <ProfileHeader/>
-        {/* photogrid */}
-        <ProfilePhotosGrid />
-        {/* stories */}
+            {/* stories */}
+            <ProfileStoriesGrid />
+            {/* photogrid */}
+            <ProfilePhotosGrid />
         </ProfileContainer>
         </>
     );
