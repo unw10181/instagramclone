@@ -97,7 +97,7 @@ export default function UploadModal({
     setText(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     //validate wether there is an actual file
     if (!file) {
       alert("Please select video or image from file system!");

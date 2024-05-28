@@ -36,17 +36,17 @@ const StoryThumbnail = styled.div<StoryThumbnailProps>`
   padding: 5px;
 `;
 const PostDeleteButton = styled.button`
-  position: absolute;
+  position: relative;
   z-index: 5;
-  top: 250px;
+  top: -20%;
   color: white;
   border-radius: 50%;
   width: 25px;
   height: 25px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  border: 1px solid gray
-  right: 20%;
+  border: 1px solid gray;
+  right: -100%;
 
   &:hover {
     background-color: red;

@@ -38,15 +38,15 @@ const CloseButton = styled.button`
 `;
 
 const StyledVideo = styled.video`
-  height: 70%;
-  width: 70%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 10px;
   max-width: 300px;
 
   @media (max-width: 480px) {
-    height: 80;
-    width: 80%;
+    height: 35%;
+    width: 100%;
   }
 `;
 
@@ -68,7 +68,10 @@ const ProgressBarContainer = styled.div`
 
 const ProgressBar = styled.div``;
 
-const CurrentVideoContainer = styled.div``;
+const CurrentVideoContainer = styled.div`
+  height: 70%;
+  width: 50%;
+`;
 
 const MuteButton = styled.button`
   position: absolute;

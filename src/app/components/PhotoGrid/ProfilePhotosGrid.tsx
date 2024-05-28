@@ -32,12 +32,11 @@ const PostDeleteButton = styled.button`
   height: 25px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  border: 1px solid gray
+  border: 1px solid gray;
 
   &:hover {
     background-color: red;
   }
-
 `;
 
 export interface PostObject {
