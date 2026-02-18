@@ -1,7 +1,11 @@
 "use client";
 import styled from "styled-components";
 import { Story } from "./ProfileStoriesGrid";
+<<<<<<< HEAD
 import { useState } from "react";
+=======
+import { useState, useRef, useEffect } from "react";
+>>>>>>> c4a9742 (new updates)
 import mutedIcon from "../../../../public/icons/unmute.png";
 import unmutedIcon from "../../../../public/icons/mute.png";
 import Image from "next/image";
@@ -20,9 +24,15 @@ const StoriesBackdrop = styled.div`
   justify-items: center;
   align-items: center;
 
+<<<<<<< HEAD
   @media (max-width: 480px) {
     gap: 15px;
   }
+=======
+  /* @media (max-width: 480px) {
+    gap: 15px;
+  } */
+>>>>>>> c4a9742 (new updates)
 `;
 
 const CloseButton = styled.button`
@@ -42,12 +52,21 @@ const StyledVideo = styled.video`
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+<<<<<<< HEAD
   max-width: 300px;
 
   @media (max-width: 480px) {
     height: 35%;
     width: 100%;
   }
+=======
+  //max-width: 300px;
+
+  /* @media (max-width: 480px) {
+    height: 35%;
+    width: 100%;
+  } */
+>>>>>>> c4a9742 (new updates)
 `;
 
 const NavigationThumbnail = styled.img`
@@ -60,23 +79,63 @@ const NavigationThumbnail = styled.img`
   }
   cursor: pointer;
   max-width: 150px;
+<<<<<<< HEAD
+=======
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 20%;
+  }
+>>>>>>> c4a9742 (new updates)
 `;
 
 const ProgressBarContainer = styled.div`
   position: relative;
+<<<<<<< HEAD
 `;
 
 const ProgressBar = styled.div``;
+=======
+  top: 50px;
+  height: 3px;
+  width: 90%;
+  margin: auto;
+  background-color: rgb(128, 128, 128);
+  @media (max-width: 480px) {
+    top: 30px;
+  }
+`;
+
+const ProgressBar = styled.div<{ progress: number }>`
+  height: 100%;
+  width: ${(props) => props.progress}%;
+  background-color: white;
+  transition: width 0.1s linear;
+`;
+>>>>>>> c4a9742 (new updates)
 
 const CurrentVideoContainer = styled.div`
   height: 70%;
   width: 50%;
+<<<<<<< HEAD
+=======
+
+  @media (max-width: 480px) {
+    height: 35%;
+    width: 100%;
+  }
+>>>>>>> c4a9742 (new updates)
 `;
 
 const MuteButton = styled.button`
   position: absolute;
+<<<<<<< HEAD
   top: 40px;
   right: 100px;
+=======
+  top: 70px;
+  right: 40px;
+>>>>>>> c4a9742 (new updates)
   border: none;
   color: white;
   cursor: pointer;
@@ -86,8 +145,13 @@ const MuteButton = styled.button`
   opacity: calc(0.7);
 
   @media (max-width: 480px) {
+<<<<<<< HEAD
     right: 50px;
     top: 10px;
+=======
+    right: 10px;
+    top: 40px;
+>>>>>>> c4a9742 (new updates)
     font-size: 12px;
   }
 `;
@@ -105,6 +169,11 @@ export default function ProfileStoriesModal({
   setCurrentStoryIndex,
 }: ProfileStoriesModalPropTypes) {
   const [muted, setMuted] = useState<boolean>(true);
+<<<<<<< HEAD
+=======
+  const [progress, setProgress] = useState<number>(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+>>>>>>> c4a9742 (new updates)
 
   const hasNext: boolean = currentStoryIndex < stories.length - 1;
   const hasPrevious: boolean = currentStoryIndex > 0;
@@ -125,6 +194,26 @@ export default function ProfileStoriesModal({
     setMuted(!muted);
   };
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const updateProgress = () => {
+      if (video && video.duration) {
+        const progress = (video.currentTime / video.duration) * 100;
+        setProgress(progress);
+      }
+    };
+
+    video.addEventListener("timeupdate", updateProgress);
+    return () => {
+      video.removeEventListener("timeupdate", updateProgress);
+    };
+  }, [currentStoryIndex]);
+
+>>>>>>> c4a9742 (new updates)
   return (
     <StoriesBackdrop>
       <CloseButton onClick={closeModal}>X</CloseButton>
@@ -139,7 +228,11 @@ export default function ProfileStoriesModal({
       {!hasPrevious && <div></div>}
       <CurrentVideoContainer>
         <ProgressBarContainer>
+<<<<<<< HEAD
           <ProgressBar />
+=======
+          <ProgressBar progress={progress} />
+>>>>>>> c4a9742 (new updates)
         </ProgressBarContainer>
 
         <div style={{ position: "relative" }}>
@@ -156,6 +249,10 @@ export default function ProfileStoriesModal({
           src={stories[currentStoryIndex].video_url}
           autoPlay
           muted={muted}
+<<<<<<< HEAD
+=======
+          ref={videoRef}
+>>>>>>> c4a9742 (new updates)
         />
       </CurrentVideoContainer>
 

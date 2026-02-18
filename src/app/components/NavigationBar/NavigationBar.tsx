@@ -46,7 +46,11 @@ const Navigation = styled.aside`
   //mobile phone
   @media (max-width: 480px) {
     height: 73px;
+<<<<<<< HEAD
     bottom: 0px;
+=======
+    bottom: -20px;
+>>>>>>> c4a9742 (new updates)
   }
 `;
 
@@ -67,7 +71,11 @@ export default function NavigationBar({ items }: NavigationBarProps) {
       {/* {image} */}
       <Navigation>
         {items.map((icon, index) => {
+<<<<<<< HEAD
           const isAddButton = icon.altText === "add";
+=======
+          const isAddButton = icon.altText === "Add";
+>>>>>>> c4a9742 (new updates)
 
           if (pathName != "/admin" && isAddButton) {
             return null;

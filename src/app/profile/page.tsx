@@ -62,6 +62,18 @@ export default function Profile() {
   const iconWidth = 25;
 
   const navbarConfigItems: Icon[] = [
+<<<<<<< HEAD
+=======
+    { path: HouseIcon, altText: "Home", width: iconWidth, height: iconHeight },
+
+    {
+      path: MagnifyingGlassIcon,
+      altText: "Search",
+      width: iconWidth,
+      height: iconHeight,
+    },
+
+>>>>>>> c4a9742 (new updates)
     {
       path: CompassIcon,
       altText: "Discover",
@@ -69,6 +81,7 @@ export default function Profile() {
       height: iconHeight,
     },
     { path: FilmIcon, altText: "Reels", width: iconWidth, height: iconHeight },
+<<<<<<< HEAD
     { path: HeartIcon, altText: "Like", width: iconWidth, height: iconHeight },
     { path: HouseIcon, altText: "Home", width: iconWidth, height: iconHeight },
     {
@@ -77,15 +90,25 @@ export default function Profile() {
       width: iconWidth,
       height: iconHeight,
     },
+=======
+
+>>>>>>> c4a9742 (new updates)
     {
       path: MessageIcon,
       altText: "Message",
       width: iconWidth,
       height: iconHeight,
     },
+<<<<<<< HEAD
     {
       path: AddButtonIcon,
       altText: "add",
+=======
+    { path: HeartIcon, altText: "Like", width: iconWidth, height: iconHeight },
+    {
+      path: AddButtonIcon,
+      altText: "Add",
+>>>>>>> c4a9742 (new updates)
       width: iconWidth,
       height: iconHeight,
       onClick: toggleModal,
